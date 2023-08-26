@@ -35,6 +35,17 @@
       "prompt": "Returning different elements from a component depending on the state of your application is known as _____ rendering.",
       "answers": ["voodoo", "conditional", "reactive", "controlled"],
       "correctIndex": 1
+    },
+    {
+      "prompt": "Components require at minimum ____ and ____?",
+      "answers": [
+        "props, state",
+        "a function starting with a capital letter, returns valid JSX",
+        "state, effects",
+        "I don't know"
+      ],
+      "correctIndex": "1",
+      "id": 7
     }
   ]
 }

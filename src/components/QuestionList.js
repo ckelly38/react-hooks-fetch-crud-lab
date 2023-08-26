@@ -57,7 +57,7 @@ function QuestionList({questions, setQuestions}) {
   {
     myqstnsarr = questions.map((qstn) => {
       return (
-        <QuestionItem key={qstn.id} question={qstn} questions={questions} deleteQuestion={handleDeleteQuestion} />
+        <QuestionItem key={qstn.id} question={qstn} questions={questions} setQuestions={setQuestions} deleteQuestion={handleDeleteQuestion} />
       );
     });
   }

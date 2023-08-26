@@ -12,9 +12,11 @@ function App() {
     if (qstn === undefined || qstn === null || qstn.length < 10) return null;
     else
     {
+      //console.log("qstn = ", qstn);
+      let myanswrsarr = [qstn.answers[0], qstn.answers[1], qstn.answers[2], qstn.answers[3]];
       let mysvrobj = {
         prompt: qstn.prompt,
-        answers: [qstn.answer1, qstn.answer2, qstn.answer3, qstn.answer4],
+        answers: myanswrsarr,
         correctIndex: qstn.correctIndex
       };
       return mysvrobj;
@@ -41,13 +43,20 @@ function App() {
     }
 
     //question is valid
+    let myanswrsarr = [qstn.answer1, qstn.answer2, qstn.answer3, qstn.answer4];
+    let myqstnobj = {
+      prompt: qstn.prompt,
+      answers: myanswrsarr,
+      correctIndex: qstn.correctIndex
+    };
+
     let myconfigobj = {
       method: "POST",
       headers: {
         "Content-Type" : "application/json",
         "Accept" : "application/json"
       },
-      body: JSON.stringify(myServerObj(qstn))
+      body: JSON.stringify(myServerObj(myqstnobj))
     };
     fetch("http://localhost:4000/questions/", myconfigobj).then((response) => response.json()).then((response) => {
       console.log("response = ", response);

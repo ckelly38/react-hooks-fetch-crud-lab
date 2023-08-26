@@ -68,7 +68,7 @@
     },
     {
       "prompt": "Components require at minimum ____ and ____?",
-      "answers":  [
+      "answers": [
         "props, state",
         "a function starting with a capital letter, returns valid JSX",
         "state, effects",
